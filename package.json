@@ -1,0 +1,26 @@
+{
+  "name": "mvcapp",
+  "version": "1.0.0",
+  "description": "MVCapp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "body-parser": "*",
+    "cookie-parser": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laffingDragons/mvcApp.git"
+  },
+  "author": "Akshay Patil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laffingDragons/mvcApp/issues"
+  },
+  "homepage": "https://github.com/laffingDragons/mvcApp#readme"
+}
