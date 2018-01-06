@@ -16,27 +16,26 @@ var response = {
 	data:null
 };*/
 
-module.exports.controller = function(app){
-	userRouter.get('/all',function(req,res){
+module.exports.controller = function (app) {
+    userRouter.get('/all', function (req, res) {
 
-		userModel.find({},function(err,allUsers){
-			if(err){
-				res.send(err);
-			}
-			else{
-				res.send(allUsers);
-			}
-		})
+        userModel.find({}, function (err, allUsers) {
+            if (err) {
+                res.send(err);
+            } else {
+                res.send(allUsers);
+            }
+        })
 
-	//res.send("this is route to get all users. Write your db code")
-	});//end get all users
+        //res.send("this is route to get all users. Write your db code")
+    }); //end get all users
 
-	userRouter.get('/:userName',function(req,res){
+    userRouter.get('/:userName', function (req, res) {
 
-		res.send("this is route to get info of particular user")
-	});//end get one user
+        res.send("this is route to get info of particular user")
+    }); //end get one user
 
-	//now making it global to app using a middleware
-	app.use('/users',userRouter);
+    //now making it global to app using a middleware
+    app.use('v1/users', userRouter);
 
 } //end controller code

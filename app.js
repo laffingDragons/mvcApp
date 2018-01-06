@@ -6,6 +6,25 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json({limit: '10mb',extended: true}));
 app.use(bodyParser.urlencoded({limit: '10mb',extended: true}));
 
+//middleware for keep a track of data flow
+app.use(function (req, res, next) {
+    console.log('Time of request : ', Date.now());
+    console.log('Request URL is ', req.originalUrl);
+    console.log('The request IP was :', req.ip);
+
+    next();
+});
+
+//////mongoose path//////////
+var dbPath = "mongodb://localhost/LinkInDatabase";
+//command to connect with database
+db = mongoose.connect(dbPath);
+
+mongoose.connection.once('open', function () {
+
+    console.log("Database Connection open successfully");
+});
+
 // fs module, by default module for file management in node js
 var fs = require('fs');
 
