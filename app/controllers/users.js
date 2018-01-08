@@ -36,6 +36,6 @@ module.exports.controller = function (app) {
     }); //end get one user
 
     //now making it global to app using a middleware
-    app.use('v1/users', userRouter);
+    app.use('/v1/users', userRouter);
 
 } //end controller code

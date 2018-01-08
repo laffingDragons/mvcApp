@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
@@ -38,10 +39,10 @@ fs.readdirSync('./app/models').forEach(function (file) {
 
 
 //include contrllers
-fs.readdirSync('./app/controller').forEach(function (file) {
+fs.readdirSync('./app/controllers').forEach(function (file) {
     if (file.indexOf('.js')) {
         //include a file as a route variable
-        var route = require('./app/controller/' + file);
+        var route = require('./app/controllers/' + file);
         //call controller function of each file and pass your app instance to it
         route.controller(app)
     }
