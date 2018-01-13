@@ -8,10 +8,11 @@
     "start": "node app"
   },
   "dependencies": {
-    "express": "*",
-    "mongoose": "*",
     "body-parser": "*",
-    "cookie-parser": "*"
+    "cookie-parser": "*",
+    "express": "*",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "*"
   },
   "repository": {
     "type": "git",

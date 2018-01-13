@@ -52,5 +52,5 @@ fs.readdirSync('./app/controllers').forEach(function (file) {
 
 
 app.listen(3000, function () {
-    console.log("Example App is running on port 3000!");
+    console.log("Server is Up at port 3000!");
 });
