@@ -17,7 +17,7 @@ app.use(function (req, res, next) {
 });
 
 //////mongoose path//////////
-var dbPath = "mongodb://localhost/LinkInDatabase";
+var dbPath = "mongodb://localhost/Jwt-Authenication";
 //command to connect with database
 db = mongoose.connect(dbPath);
 
