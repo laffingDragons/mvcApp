@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
 var express = require('express');
 
+
 //express router used to define routes
 var userRouter = express.Router();
-
 
 
 var userModel = mongoose.model('User')

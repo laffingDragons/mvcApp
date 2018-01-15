@@ -4,6 +4,12 @@ var mongoose = require('mongoose');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+//including Jwt 
+var jwt = require('jsonwebtoken');
+
+//setting a Jwt secret
+process.env.SECRET_KEY = "power";
+
 app.use(bodyParser.json({limit: '10mb',extended: true}));
 app.use(bodyParser.urlencoded({limit: '10mb',extended: true}));
 
@@ -48,6 +54,10 @@ fs.readdirSync('./app/controllers').forEach(function (file) {
     }
 }); //end for each
 
+//adding controller
+var authenticateController = require('./app/controllers/authenticate-controller.js')
+//route to get token
+app.get('/token', authenticateController.authenticate);
 
 
 

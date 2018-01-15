@@ -14,14 +14,7 @@
     "jsonwebtoken": "^8.1.0",
     "mongoose": "*"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/laffingDragons/mvcApp.git"
-  },
   "author": "Akshay Patil",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/laffingDragons/mvcApp/issues"
-  },
-  "homepage": "https://github.com/laffingDragons/mvcApp#readme"
+  
 }
